@@ -98,6 +98,51 @@
             padding-top: 0.5rem !important;
             padding-bottom: 0.5rem !important;
         }
+
+        .box {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .box1 {
+            background-color: #cccccc; /* Light grey */
+        }
+        .box2 {
+            background-color: #333333; /* Dark grey */
+        }
+        .box3 {
+            background-color: #ff0000; /* Red */
+        }
+        .center-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+        }
+
+        .btn-circle.btn-lg {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            border-radius: 25px;
+        }
+
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            font-size: 24px;
+            line-height: 1.33;
+            border-radius: 35px;
+        }
     </style>
 </head>
 <body>
@@ -211,8 +256,62 @@
             <p style="text-align: center;">
                 Le PAR Essentiel est proposé à
                 <br>
-                <span style="font-weight: bold; font-size: 1.6rem; color: #FFFFFF">350€</span><span> ttc </span>
+                <span style="font-weight: bold; font-size: 1.6rem; color: #FFFFFF">690€</span><span> ttc </span>
             </p>
+        </div>
+    </div>
+</div>
+
+<div class="py-4"></div>
+
+<div class="container">
+    <div class="row col-12">
+        <div class="" style="text-align: left;">
+            <h3 style="font-weight: bold"> Les offres de ConnectPro </h3>
+            <img class="py-4" src="asset/tableau.svg" alt="tableau">
+        </div>
+    </div>
+</div>
+
+<div class="container d-flex align-items-center justify-content-center">
+    <div class="row w-100 text-center">
+        <div class="col-md-4 col-sm-12 center-content">
+            <div class="box box1"></div>
+            <span>Action à faire par le client</span>
+        </div>
+        <div class="col-md-4 col-sm-12 center-content">
+            <div class="box box2"></div>
+            <span>Validation à faire par le client</span>
+        </div>
+        <div class="col-md-4 col-sm-12 center-content">
+            <div class="box box3"></div>
+            <span>Fait par ConnectPro</span>
+        </div>
+    </div>
+</div>
+
+<div class="py-2"></div>
+
+<div class="container">
+    <div class="py-4 text-center col-12 mx-auto" style="background: #FFFFFF">
+        <div class="container">
+            <h3>Comment va se dérouler le processus de raccordement dans le cadre d’un PAR Premium ? <button type="button" class="btn btn-danger btn-circle btn-lg " data-toggle="collapse" data-target="#essentiel"></button></h3>
+            <div id="essentiel" class="collapse">
+                <img src="asset/process01.jpg" alt="parP" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="py-2"></div>
+
+<div class="container">
+    <div class="py-4 text-center col-12 mx-auto" style="background: #FFFFFF">
+        <div class="container">
+            <h3>Comment va se dérouler le processus de raccordement dans le cadre d’un PAR Premium ? <button type="button" class="btn btn-dark btn-circle btn-lg " data-toggle="collapse" data-target="#premium"></button></h3>
+            <div id="premium" class="collapse">
+                <img src="asset/process02.jpg" alt="parP" class="img-fluid">
+            </div>
         </div>
     </div>
 </div>
@@ -231,6 +330,21 @@
 </div>
 
 <div class="py-4"></div>
+
+<div class="container">
+    <div class="p-4 text-center col-12 mx-auto" style="background: #FFFFFF">
+       <h3 style="font-weight: bold"> Mon projet n’est pas collectif, mais ne concerne pas une maison neuve </h3>
+            <br>
+        <h5 class="mb-2" style="text-align: center" >
+        Pour des projets spécifiques (usine, campus de bâtiment, datacenter, site de production énergétique, etc.),
+            merci de nous contacter pour un devis personnalisé.</h5>
+        <div class="py-2">
+        </div>
+        <a data-mdb-ripple-init class="btn btn-hover py-1 px-5" style="font-size: 1.3rem" href="#" role="button">CONTACT</a>
+    </div>
+</div>
+
+
 
 <div class="">
     <div CLASS="py-4 text-center mx-auto" style="background: #585858;">
