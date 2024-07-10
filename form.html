@@ -86,6 +86,23 @@
             padding-bottom: 0.5rem !important;
         }
     </style>
+    <script>
+        function sendMail() {
+            var nom = document.getElementById("nom").value;
+            var email = document.getElementById("email").value;
+            var telephone = document.getElementById("telephone").value;
+            var infoSupplementaire = document.getElementById("infoSupplementaire").value;
+
+            var subject = "Nouvelle demande de raccordement";
+            var body = `NOM: ${nom}\n` +
+                `Email: ${email}\n` +
+                `Numéro de téléphone: ${telephone}\n` +
+                `Informations supplémentaires: ${infoSupplementaire}`;
+
+            var mailtoLink = `mailto:boulagoblo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -121,67 +138,38 @@
 <main>
     <div class="banner">
         <div class="banner-text mx-auto">
-            Préparez le raccordement de vos projets immobiliers à la fibre optique !
+            <h1>Formulaire</h1>
         </div>
     </div>
 </main>
 
-<div class="py-4 container">
-    <div class="row col-12 mx-auto">
-        <div class="py-1">
-            <div class="" style="text-align: left; font-size: 1.2rem; font-weight: bold">
-                <p>ConnectPro vous accompagne vers la meilleure solution pour le raccordement de votre maison ou de vos logements au réseau fibre.<br>
-                <span style="color: #DF0101">Notre valeur ajoutée : efficacité et transparence.</span> Nous vous proposons des tarifs clairs, sans surprise ni frais cachés.</p>
-            </div>
+<div class="container mt-5">
+    <h1>Raccordement à la fibre optique d'une maison neuve</h1>
+    <p>Vous viabilisez un terrain, construisez une maison, un immeuble d'habitation collectif ou un bâtiment pour une entreprise ?</p>
+    <p>ConnectPro vous accompagne avec une offre sur mesure pour suivre votre raccordement au réseau local de fibre optique.</p>
+    <p>En cas de questions, n’hésitez pas à nous contacter à l'adresse suivante : <a href=""></a></p>
+    <form onsubmit="sendMail(); return false;">
+        <div class="mb-3">
+            <label for="nom" class="form-label">NOM *</label>
+            <input type="text" class="form-control" id="nom" required>
         </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="py-2 row col-12">
-        <div class="" style="text-align: center;">
-            <h3> Pourquoi opter pour notre offre de raccordement ? </h3>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email *</label>
+            <input type="email" class="form-control" id="email" required>
         </div>
-    </div>
-</div>
-
-<div class="container py-2">
-    <div class="row col-12 mx-auto">
-        <div class="py-2">
-            <div class="" style="text-align:left;font-size: 1.2rem">
-                <p style="font-weight: lighter"> <span style="font-weight: bold"> Coût : </span>Cabinet d’étude indépendant, notre offre est la mieux positionnée du marché. Nos prix détaillés sont disponibles sur la page <a href="OffreP.html" style="color: #DF0101; text-decoration: none"> Offres Particuliers </a>,<a href="OffreC.html" style="color: #DF0101; text-decoration: none"> Offres Collectifs </a>.</p>
-            </div>
+        <div class="mb-3">
+            <label for="telephone" class="form-label">Numéro de téléphone *</label>
+            <input type="text" class="form-control" id="telephone" required>
         </div>
-    </div>
-</div>
 
-<div class="py-1">
-    <div class="container">
-        <div class="row col-12 mx-auto py-2">
-            <div class="" style="text-align:left;font-size: 1.2rem">
-                <p style="font-weight: lighter"> <span style="font-weight: bold"> Expertise reconnue : </span>Nos équipes accompagnent les particuliers et les professionnels depuis plus de 16 ans dans le déploiement d’infrastructures télécoms, assurant la mise en œuvre de la meilleure solution technique possible.</p>
-            </div>
+        <div class="mb-3">
+            <label for="infoSupplementaire" class="form-label">Comment pouvons-nous vous aider ? *</label>
+            <textarea class="form-control" id="infoSupplementaire" required rows="3"></textarea>
         </div>
-    </div>
-</div>
-
-<div class="container py-1">
-    <div class="row col-12 mx-auto">
-        <div class="py-2">
-            <div class="" style="text-align:left;font-size: 1.2rem">
-                <p style="font-weight: lighter"> <span style="font-weight: bold"> Accompagnement à la carte : </span>Nous comprenons les défis et les exigences spécifiques de chaque projet immobilier. C’est pourquoi nous offrons un accompagnement personnalisé et adapté à vos besoins. Que vous soyez un particulier ou un professionnel, notre équipe dédiée vous guide à travers chaque étape du processus, de la planification à la mise en œuvre.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-<div class="p-4 text-center col-12 mx-auto" style="background: #FFFFFF">
-    <h3 class="mb-2" style="font-weight: bold">Contactez-nous pour en savoir plus sur nos solutions de raccordement.</h3>
-    <div class="py-2">
-    </div>
-    <a data-mdb-ripple-init class="btn btn-hover py-2 px-5" style="font-size: 1.3rem" href="form.html" role="button">CONTACT</a>
-</div>
+        <button type="reset" class="btn btn-secondary">Clear</button>
+        <button type="submit" class="btn btn-danger">Envoyer</button>
+    </form>
 </div>
 
 <div class="py-4">
@@ -190,15 +178,15 @@
 <div class="">
     <div CLASS="py-4 text-center mx-auto" style="background: #585858;">
         <div>
-        <footer>
-            <p style="color: #FFFFFF; font-size: 1.1rem"> <a href="form.html" style="text-decoration: none; color: #FFFFFF">Contact </a>| <a href="" style="text-decoration: none; color: #FFFFFF">Mentions légales </a>
-        </footer>
+            <footer>
+                <p style="color: #FFFFFF; font-size: 1.1rem"> <a href="" style="text-decoration: none; color: #FFFFFF">Contact </a>| <a href="" style="text-decoration: none; color: #FFFFFF">Mentions légales </a>
+            </footer>
         </div>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
